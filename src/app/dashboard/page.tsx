@@ -3,23 +3,19 @@
 import React, {useEffect, useState} from "react";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import {LAMPORTS_PER_SOL} from "@solana/web3.js";
-import {getSolPrice} from "@/app/lib/getSolPrice";
 import SolanaChart from "@/app/lib/solanachart";
+import TokenList from "@/app/components/tokenlist";
 
 export default function Dashboard() {
     const { connection } = useConnection();
     const { publicKey } = useWallet();
     const [balance, setBalance] = useState<number>(0);
-    const [solPrice, setSolPrice] = useState<number | null>(null);
 
     useEffect(() => {
         let balanceInterval: NodeJS.Timeout;
 
         const fetchInitialData = async () => {
-            const price = await getSolPrice();
-            setSolPrice(price);
 
-            // Wenn Wallet verbunden, starte Balance-Loop
             if (publicKey) {
                 const updateBalance = async () => {
                     const newBalance = await connection.getBalance(publicKey);
@@ -59,6 +55,8 @@ export default function Dashboard() {
                     <p className="text-2xl font-bold">Devnet</p>
                 </div>
             </div>
+
+            <TokenList />
 
             {/* Platz für weitere Inhalte */}
             <div className="mt-10">

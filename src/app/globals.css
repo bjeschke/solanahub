@@ -64,34 +64,34 @@ form {
     box-sizing: border-box;
   }
 
-}
+  button {
+    display: inline-flex;
+    appearance: none;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+    white-space:
+            nowrap;
+    vertical-align: middle;
+    outline:
+            transparent solid 2px;
+    outline-offset: 2px;
+    line-height: 1.2;
+    height: 3rem;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    width: 100%;
+    margin-top: 48px;
+    background:
+            rgb(24, 162, 180);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
 
-button {
-  display: inline-flex;
-  appearance: none;
-  -moz-box-align: center;
-  align-items: center;
-  -moz-box-pack: center;
-  justify-content: center;
-  user-select: none;
-  position: relative;
-  white-space:
-          nowrap;
-  vertical-align: middle;
-  outline:
-          transparent solid 2px;
-  outline-offset: 2px;
-  line-height: 1.2;
-  height: 3rem;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
-  width: 100%;
-  margin-top: 48px;
-  background:
-          rgb(24, 162, 180);
-  border-radius: 10px;
-  box-sizing: border-box;
-  font-size: 15px;
 }
 
 .wallet-adapter-button {
