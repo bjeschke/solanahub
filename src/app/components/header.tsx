@@ -19,6 +19,8 @@ const routes= [
 ];
 
 export default function Header() {
+    const pathname = usePathname()
+
     return (
         <header className="w-full px-4 py-2 flex justify-between items-center border-b shadow-sm">
             <div className="flex items-center space-x-4">
@@ -30,14 +32,24 @@ export default function Header() {
                     <ul className="flex gap-x-6 ml-8 text-sm">
                         {
                             routes.map((route) => (
-                                <li key={route.path} className="text-white/50 hover:text-white transition relative">
+                                <li key={route.path} className={`hover:text-white transition relative ${
+                                    pathname === route.path ? 'text-white' : 'text-white/50'
+                                }`}>
                                     <Link
                                         href={route.path}
                                         className="h-12 flex items-center relative"
                                     >
                                         {route.name}
                                     </Link>
-                                    <motion.div className="bg-green h-1 w-full absolute bottom-2"></motion.div>
+                                    {
+                                        pathname === route.path && (
+                                            <motion.div
+                                                layoutId="underline"
+                                                className="absolute bottom-0 left-0 right-0 h-1 bg-solgreen"
+                                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                            />
+                                        )
+                                    }
                                 </li>
                             ))
                         }

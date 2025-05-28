@@ -7,7 +7,7 @@ module.exports = {
             blue: colors.lightBlue,
             red: colors.rose,
             pink: colors.fuchsia,
-            green: '#a4f839',
+            solgreen: '#a4f839',
         },
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],
