@@ -1,0 +1,35 @@
+{
+  "name": "solana-token-creator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "clear": "rm -rf node_modules package-lock.json .next"
+  },
+  "dependencies": {
+    "@metaplex-foundation/js": "^0.19.4",
+    "@metaplex-foundation/mpl-token-metadata": "^2.13.0",
+    "@pinata/sdk": "^2.1.0",
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/spl-token": "^0.4.0",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.91.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "axios": "^1.7.9",
+    "form-data": "^4.0.1",
+    "next": "14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}

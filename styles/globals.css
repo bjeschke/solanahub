@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-text {
+  background: linear-gradient(45deg, #e0ad6b, #e0ad6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-gradient {
+  background: linear-gradient(180deg, #1a1a1a 0%, #242424 100%);
+}
+
+.card-gradient {
+  background: linear-gradient(145deg, #242424 0%, #1a1a1a 100%);
+}
+
+.hero-section {
+  background-image: url("/hero-bg.jpg"); /* You'll need to add this image to your public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 26, 0.95) 0%,
+    rgba(26, 26, 26, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(112, 93, 242, 0.3) 0%,
+    rgba(112, 93, 242, 0) 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
